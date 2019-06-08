@@ -1,0 +1,3 @@
+- la aplicación puede mostrar cuales son pares y cuales no.
+- la aplicación puede mostrar marcados los números que no son perfectos, pero sí son primos.
+- la aplicación puede mostrar cuales son impares.
