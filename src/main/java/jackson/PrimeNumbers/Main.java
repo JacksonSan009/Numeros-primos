@@ -1,55 +1,51 @@
 package jackson.PrimeNumbers;
 
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
         int starRange;
         int finalRange;
-        ArrayList<Integer> list = new ArrayList<>();
+
+        StringBuilder str = new StringBuilder();
 
         starRange = getNumber("ingrese el rango inicial");
         finalRange = getNumber("Ingrese el rango final");
 
         for (int i = starRange; i <= finalRange; i++) {
-            if (isPerfectNumber(i)) {
-                list.add(i);
+            if (isPrime(i)) {
+                str.append(i);
+                str.append(", ");
             }
         }
 
-        list.forEach(x -> System.out.println("Numeros naturales perfectos: " + x));
-    }
-
-    private static void showMessage(String message) {
-        JOptionPane.showMessageDialog(null, message);
+        System.out.println("Números naturales perfectos: " + str.toString());
     }
 
     private static int getNumber(String message) {
         int number = Integer.parseInt(JOptionPane.showInputDialog(message));
 
         if (number <= 0) {
-            showMessage("El número debe ser mayor que 0.");
+            JOptionPane.showMessageDialog(null, "El número debe ser mayor que 0.");
+
             return 1;
         }
         return number;
     }
 
-    private static boolean isPerfectNumber(int number) {
-        int dividend = 0;
+    private static boolean isPrime(int number) {
+        if (number == 2) return true;
 
-        for (int i = 1; i < number; i++) {
+        if (number % 2 == 0 || number < 2) return false;
 
-            if (number % i == 0) {
-                dividend += i;
-            }else if (dividend == number) {
-                return true;
-            }
-
+        int i = 3;
+        while (i < Math.sqrt(number)) {
+            if (number % i == 0) return false;
+            i += 2;
         }
-        return false;
+
+        return true;
     }
 
 }
