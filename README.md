@@ -1,3 +1,3 @@
-# Numeros-primos
+# Prime numbers finder
 
-Prueba que consiste en saber en un rango de números, cuales son primos
+Aplication who find the numbers who are prime between a range of numbers
