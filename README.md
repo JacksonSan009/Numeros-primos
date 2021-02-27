@@ -1,11 +1,11 @@
 # Prime numbers finder
 
-Aplication who find the numbers who are prime numbers.
+Application that finds prime numbers.
 
 ### How it works
 
-you enter the start and the end range, and the application would show you a list
-of the prime numbers find.
+you enter the start and end range, and the app will show you a list
+of the prime numbers it finds.
 
 ### Technologies
 * Java 1.8
