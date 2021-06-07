@@ -1,12 +1,13 @@
 # Prime numbers finder
 
-Application that finds prime numbers.
+Simple application to find prime numbers.
 
-### How it works
+### Project Status: Complete
 
-you enter the start and end range, and the app will show you a list
-of the prime numbers it finds.
+## How it works
 
-### Technologies
+Enter the start and end range of numbers to search, and it will show you a list of the prime numbers found
+
+## Technologies
 * Java 1.8
 * Java Swing
